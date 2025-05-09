@@ -11,7 +11,7 @@ export default function LoginPage() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post('http://localhost:8080/api/login', { userName, password });
+      const res = await axios.post('https://assignments-usle.onrender.com/api/login', { userName, password });
       setAuthToken(res.data.token);
       navigate('/launch');
     } catch (err) {
